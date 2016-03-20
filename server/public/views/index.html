@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ToDo List</title>
+
+    <link rel="stylesheet" href="../assets/style.css">
+
+    <script type="text/javascript" src="../vendors/jquery.min.js"></script>
+    <script type="text/javascript" src="../scripts/client_app.js"></script>
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  </head>
+  <body>
+
+    <h1>to-do list</h1>
+
+    <div class="container">
+
+      <div class="form-style">
+
+        <form id="todo-form">
+
+
+          <p>
+            <label for="task">new task </label><br />
+            <input type="text" id="task" name="task" placeholder="task" required />
+
+            <button class = "btn" id="submit-button">add</button>
+          </p>
+
+
+        </form>
+
+
+      </div>
+    </div>
+
+    <div class="container items">
+
+      <h2>pending tasks</h2>
+
+      <div class="list">
+
+      </div>
+
+    </div>
+
+  </body>
+</html>
