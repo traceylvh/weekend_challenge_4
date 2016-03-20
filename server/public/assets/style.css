@@ -74,12 +74,14 @@ h2 {
   text-decoration: none;
 }
 
+/*this class is for active tasks*/
 .true {
   color: #A0A0A0;
 }
 
+/*this class is for completed tasks*/
 .false {
-  color: #000;
+  color: #f24c27;
 }
 
 .delete {
