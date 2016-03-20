@@ -25,6 +25,11 @@ body {
   margin: 0;
 }
 
+.line-item-done {
+  /*background-color: #A0A0A0;*/
+  text-decoration: line-through;
+}
+
 h1 {
   background-color: #037e8c;
   text-align: center;
@@ -67,6 +72,18 @@ h2 {
 .btn:hover {
   background: #a7c520;
   text-decoration: none;
+}
+
+.true {
+  color: #A0A0A0;
+}
+
+.false {
+  color: #000;
+}
+
+.delete {
+  color: #f24c27;
 }
 
 input[type=text] {

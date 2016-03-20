@@ -1,6 +1,9 @@
 $(document).ready(function() {
     // console.log("this works!");
     $('#submit-button').on('click', getFormData);
+    //listen for Change button click
+  $('.list').on('click', '.true', markComplete);
+
     getServerData();
 
 });
@@ -59,7 +62,13 @@ function appendDom(listItems) {
   console.log(listItems);
   $('.list').empty();
   listItems.forEach(function(item){
-    $('.list').append('<p class="line-item"><input type="checkbox" name="'+ item.id + '" value="' +
-    item.status + '">' + item.task + '</p>');
+    $('.list').append('<p class="line-item"><button id="' + item.id + '" class="' + item.status + '">&#10004</button> ' +
+    '<button id="' + item.id + '" class="delete">&#10008</button> ' + item.task + '</p>');
   });
+}
+
+//change the background color
+function markComplete() {
+ $(this).toggleClass('false');
+ $(this).parent().toggleClass('line-item-done');
 }
