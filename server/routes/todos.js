@@ -18,7 +18,7 @@ if (process.env.DATABASE_URL) {
 router.get('/', function(req, res) {
     var list = [];
     pg.connect(connectionString, function(err, client, done) {
-        var query = client.query('SELECT * FROM todo_list ORDER BY id;');
+        var query = client.query('SELECT * FROM todo_list ORDER BY status DESC;');
 
         // Stream list back one row at a time
         query.on('row', function(row) {

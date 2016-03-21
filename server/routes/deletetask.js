@@ -15,17 +15,15 @@ if (process.env.DATABASE_URL) {
 
 
 //send updated status to db
-router.post('/', function(req, res) {
+router.delete('/', function(req, res) {
     // console.log('body: ', req.body);
-    var completeTask = {
-        id: req.body.id,
-        status: req.body.status
+    var deleteTask = {
+        id: req.body.id
     };
-    // console.log('status:', completeTask.status);
 
     pg.connect(connectionString, function(err, client, done) {
-        client.query("UPDATE todo_list SET status=($1) WHERE id=($2)",
-            [completeTask.status, completeTask.id],
+        client.query("DELETE FROM todo_list WHERE id=($1)",
+            [deleteTask.id],
             function (err, result) {
                 done();
 

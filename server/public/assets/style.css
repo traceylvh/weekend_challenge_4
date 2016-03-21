@@ -19,15 +19,18 @@ body {
   padding: 3px 20px 60px 20px;
 }
 
-.line-item {
+.line-item-true {
   border-bottom: 1px solid #037e8c;
   padding: 7px 0;
   margin: 0;
 }
 
-.line-item-done {
-  /*background-color: #A0A0A0;*/
+.line-item-false {
+  border-bottom: 1px solid #037e8c;
+  padding: 7px 0;
+  margin: 0;
   text-decoration: line-through;
+  background-color: #E3E0CF;
 }
 
 h1 {
